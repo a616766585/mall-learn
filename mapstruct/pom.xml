@@ -10,7 +10,7 @@
     </parent>
     <groupId>cn.muzaijian.mall</groupId>
     <artifactId>mapstruct</artifactId>
-    <version>0.0.1-RELEASE</version>
+    <version>1.0-RELEASE</version>
     <name>mapstruct</name>
     <description>Map Struct project for Spring Boot</description>
     <properties>

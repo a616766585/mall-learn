@@ -29,7 +29,7 @@ public class PmsBrandItemDTO implements Serializable {
 
     private String logo;
 
-    private String bigPic;
+    private String bigPicture;
 
     private String brandStory;
 }
