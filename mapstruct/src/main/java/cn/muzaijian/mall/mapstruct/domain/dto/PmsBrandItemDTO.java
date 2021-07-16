@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 品牌 DTO
+ * 商品品牌 ItemDTO
  * </p>
  *
  * @author muzaijian
