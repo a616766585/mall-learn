@@ -1,0 +1,11 @@
+server:
+  port: 9091
+  servlet:
+    multipart:
+      enabled: true # 文件上传开关
+      max-file-size: 5MB # 最大上传文件大小
+minio:
+  endpoint: http://172.17.0.3:9000 # MinIO 服务地址
+  bucketName: mall # 存储桶名称
+  accessKey: root # 访问的 key
+  secretKey: 123456789 # 访问的 secret
