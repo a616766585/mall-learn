@@ -2,8 +2,8 @@ package cn.muzaijian.mall.minio.manager.impl;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.json.JSONUtil;
-import cn.muzaijian.mall.admin.domain.dto.BucketPolicyConfigDTO;
-import cn.muzaijian.mall.admin.domain.vo.MinioUploadVO;
+import cn.muzaijian.mall.minio.domain.dto.BucketPolicyConfigDTO;
+import cn.muzaijian.mall.minio.domain.vo.MinioUploadVO;
 import cn.muzaijian.mall.minio.manager.MinioManager;
 import io.minio.BucketExistsArgs;
 import io.minio.MakeBucketArgs;
@@ -54,7 +54,7 @@ public class MinioManagerImpl implements MinioManager {
             if (isExist) {
                 log.info("{} 存储桶已经存在。", bucketName);
             } else {
-                // 创建存储桶并设置只读权限
+                // 创建存储桶并设置匿名用户只读权限
                 MakeBucketArgs makeBucketArgs = MakeBucketArgs.builder()
                         .bucket(bucketName)
                         .build();

@@ -1,10 +1,7 @@
 package cn.muzaijian.mall.minio.controller;
 
-import cn.muzaijian.mall.admin.manager.MinioManager;
-import cn.muzaijian.mall.common.api.CommonResult;
-import cn.muzaijian.mall.common.util.CommonResultUtil;
 import cn.muzaijian.mall.minio.domain.vo.MinioUploadVO;
-import io.swagger.annotations.ApiOperation;
+import cn.muzaijian.mall.minio.manager.MinioManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,11 +36,15 @@ public class MinioController {
         return minioManager.upload(file);
     }
 
-    @ApiOperation("文件删除")
+    /**
+     * 文件删除
+     *
+     * @param objectName 文件所在存储桶的完整路径与名称
+     * @return 文件删除结果
+     */
     @DeleteMapping
-    public CommonResult delete(@RequestParam String objectName) {
-        boolean result = minioManager.delete(objectName);
-        return CommonResultUtil.booleanReturn(result);
+    public boolean delete(@RequestParam String objectName) {
+        return minioManager.delete(objectName);
     }
 
 }
