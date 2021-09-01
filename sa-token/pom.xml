@@ -15,6 +15,7 @@
     <description>Sa-Token project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
+        <sa-token-spring-boot-starter.version>1.25.0</sa-token-spring-boot-starter.version>
     </properties>
     <dependencies>
         <dependency>
@@ -26,6 +27,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!-- Sa-Token 权限认证, 在线文档：http://sa-token.dev33.cn/ -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
+            <version>${sa-token-spring-boot-starter.version}</version>
         </dependency>
     </dependencies>
 
