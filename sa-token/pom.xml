@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.muzaijian.mall</groupId>
-    <artifactId>satoken</artifactId>
+    <artifactId>sa-token</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>sa-token</name>
     <description>Sa-Token project for Spring Boot</description>
