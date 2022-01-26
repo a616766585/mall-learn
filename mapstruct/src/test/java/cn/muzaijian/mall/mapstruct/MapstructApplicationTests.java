@@ -1,6 +1,7 @@
 package cn.muzaijian.mall.mapstruct;
 
-import cn.muzaijian.mall.mapstruct.convert.PmsBrandConvert;
+import cn.muzaijian.mall.mapstruct.convert.PmsBrandConvertDemoOne;
+import cn.muzaijian.mall.mapstruct.convert.PmsBrandConvertDemoTwo;
 import cn.muzaijian.mall.mapstruct.domain.dto.PmsBrandItemDTO;
 import cn.muzaijian.mall.mapstruct.mbg.entity.PmsBrand;
 import org.junit.jupiter.api.Test;
@@ -11,19 +12,26 @@ import org.springframework.boot.test.context.SpringBootTest;
 class MapstructApplicationTests {
 
     @Autowired
-    private PmsBrandConvert brandConvert;
+    private PmsBrandConvertDemoOne brandConvertDemoOne;
 
     @Test
-    void contextLoads() {
-    }
-
-    @Test
-    void testMapStruct() {
+    void testMapStructDemoOne() {
         PmsBrandItemDTO brandItemDTO = new PmsBrandItemDTO();
-        brandItemDTO.setBigPic("11111");
-        brandItemDTO.setBrandStory("22222");
-        brandItemDTO.setLogo("33333");
-        PmsBrand brand = brandConvert.convert(brandItemDTO);
+        brandItemDTO.setBigPicture("picture");
+        brandItemDTO.setBrandStory("阿里云故事");
+        brandItemDTO.setLogo("阿里云 logo");
+        PmsBrand brand = brandConvertDemoOne.convert(brandItemDTO);
         System.out.println(brand);
     }
+
+    @Test
+    void testMapStructDemoTwo() {
+        PmsBrandItemDTO brandItemDTO = new PmsBrandItemDTO();
+        brandItemDTO.setBigPicture("picture");
+        brandItemDTO.setBrandStory("腾讯云故事");
+        brandItemDTO.setLogo("腾讯云 logo");
+        PmsBrand brand = PmsBrandConvertDemoTwo.INSTANCE.convert(brandItemDTO);
+        System.out.println(brand);
+    }
+
 }

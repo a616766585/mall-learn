@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 品牌 DTO
+ * 商品品牌 ItemDTO
  * </p>
  *
  * @author muzaijian
@@ -29,7 +29,7 @@ public class PmsBrandItemDTO implements Serializable {
 
     private String logo;
 
-    private String bigPic;
+    private String bigPicture;
 
     private String brandStory;
 }
