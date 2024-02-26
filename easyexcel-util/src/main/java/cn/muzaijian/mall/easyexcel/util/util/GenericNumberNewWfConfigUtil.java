@@ -17,7 +17,7 @@ import java.util.List;
 public class GenericNumberNewWfConfigUtil {
 
     public static void main(String[] args) {
-        var fileName = "C:\\Users\\lijian01\\Documents\\work\\堡垒机\\Generic_Number_New_WF.xlsx";
+        var fileName = "Generic_Number_New_WF.xlsx";
         EasyExcel.read(fileName, GenericNumberNewWf.class, new PageReadListener<GenericNumberNewWf>(dataList -> {
             mergeGenericNumberNewWf(dataList);
             CommonUtil.sort(dataList, Comparator.nullsLast(Comparator.comparing(GenericNumberNewWf::getStandardize, Comparator.nullsLast(String::compareTo))));
@@ -31,7 +31,7 @@ public class GenericNumberNewWfConfigUtil {
      * @param genericNumberNewWfs 需合并编码申请配置表
      */
     public static void mergeGenericNumberNewWf(List<GenericNumberNewWf> genericNumberNewWfs) {
-        var fileName = "C:\\Users\\lijian01\\Documents\\work\\堡垒机\\编码申请标准化审批人对应表.xlsx";
+        var fileName = "编码申请分类处理人对应表.xlsx";
         EasyExcel.read(fileName, GenericNumberStandardize.class, new PageReadListener<GenericNumberStandardize>(dataList -> {
             outer:
             for (var genericNumberStandardize : dataList) {
